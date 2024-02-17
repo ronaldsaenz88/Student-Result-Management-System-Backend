@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaTimes } from 'react-icons/fa'; // Assuming you're using FontAwesome
 import './Students.css';
 
 export default function StudentsList() {
@@ -48,7 +49,9 @@ export default function StudentsList() {
                             <td>{student.dateOfBirth}</td>
                             <td>{student.email}</td>
                             <td>
-                            <button onClick={() => handleDelete(student._id)}>Delete</button>
+                                <button className="delete-button" onClick={() => handleDelete(student._id)}>
+                                    <FaTimes />
+                                </button>
                             </td>
                         </tr>
                         ))}

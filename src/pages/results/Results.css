@@ -1,6 +1,7 @@
 .results-content {
     text-align: center;
-    padding: 20rem;
+    padding-left: 20rem;
+    padding-right: 5rem;
 }
 
 .table {

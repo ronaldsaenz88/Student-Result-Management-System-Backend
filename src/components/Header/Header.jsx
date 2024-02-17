@@ -8,11 +8,11 @@ export default function Header() {
       <img src={logo} className="App-logo" alt="logo" />
       <nav className="mainnav">
         <a href="/">Home</a>
-        <a href="/">Add New Students</a>
+        <a href="/students_add">Add New Students</a>
         <a href="/students_list">Students List</a>
-        <a href="/">Add New Courses</a>
+        <a href="/courses_add">Add New Courses</a>
         <a href="/courses_list">Courses List</a>
-        <a href="/">Add New Results</a>
+        <a href="/results_add">Add New Results</a>
         <a href="/results_list">Results List</a>
       </nav>
     </div>
