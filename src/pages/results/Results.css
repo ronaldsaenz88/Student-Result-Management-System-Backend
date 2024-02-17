@@ -1,0 +1,46 @@
+.results-content {
+    text-align: center;
+    padding: 20rem;
+}
+
+.table {
+    margin-top: 1rem;
+}
+
+.table table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Additional styles for the predictions table */
+.table-container {
+    margin-top: 1rem;
+    overflow-x: auto; /* Allows table to scroll on small screens */
+}
+
+.table {
+    width: 100%; /* Full width */
+    border-collapse: collapse;
+}
+
+.table thead {
+    background-color: #f2f2f2;
+}
+
+.table thead th {
+    padding: 0.5rem 1rem;
+}
+
+.table tbody td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Zebra-striping for rows */
+}
