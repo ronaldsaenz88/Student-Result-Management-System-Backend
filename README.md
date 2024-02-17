@@ -28,3 +28,12 @@ Welcome to the Student Result Management System frontend. This application is de
 
 ## Configuration
 Ensure to set the appropriate environment variables if required.
+
+## Contributing
+If you'd like to contribute to this project, please follow the guidelines in the CONTRIBUTING.md file.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+- Any credits or acknowledgments you'd like to include.
