@@ -9,23 +9,42 @@ export default function CoursesList() {
   
     // Fetch or set your course data using useEffect or other methods
     useEffect(() => {
-        const fetchCourses = async () => {
-            try {
-                const response = await fetch('https://student-mngt-system-backend-ae1fa06b6810.herokuapp.com/api/get_courses');
-                const data = await response.json();
-                setCourses(data.courses);
-            } catch (error) {
-                console.error('Error fetching courses data:', error);
-            }
-        };
-  
         fetchCourses();
     }, []);
   
+    const fetchCourses = async () => {
+        try {
+            const response = await fetch('https://student-mngt-system-backend-ae1fa06b6810.herokuapp.com/api/get_courses');
+            const data = await response.json();
+            setCourses(data.courses);
+        } catch (error) {
+            console.error('Error fetching courses data:', error);
+        }
+    };
 
-    const handleDelete = (courseId) => {
-        // Implement your delete logic here
-        console.log(`Delete course with ID: ${courseId}`);
+    const handleDelete = async (courseId) => {
+        try {
+            const response = await fetch(`https://student-mngt-system-backend-ae1fa06b6810.herokuapp.com/api/delete_course/${courseId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                // Course deletion was successful
+                alert("Course deleted successfully!");
+                console.log(`Delete course with ID: ${courseId}`);
+                
+                fetchCourses();
+            } else {
+                console.error('Error deleting course:', data.error);
+            }
+        } catch (error) {
+            console.error('Error deleting course:', error);
+        }
     };
 
     return (

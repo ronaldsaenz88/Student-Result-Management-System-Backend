@@ -9,23 +9,42 @@ export default function StudentsList() {
   
     // Fetch or set your student data using useEffect or other methods
     useEffect(() => {
-      const fetchStudents = async () => {
-        try {
-          const response = await fetch('https://student-mngt-system-backend-ae1fa06b6810.herokuapp.com/api/get_students');
-          const data = await response.json();
-          setStudents(data.students);
-        } catch (error) {
-          console.error('Error fetching student data:', error);
-        }
-      };
-  
-      fetchStudents();
+        fetchStudents();
     }, []);
   
+    const fetchStudents = async () => {
+        try {
+            const response = await fetch('https://student-mngt-system-backend-ae1fa06b6810.herokuapp.com/api/get_students');
+            const data = await response.json();
+            setStudents(data.students);
+        } catch (error) {
+            console.error('Error fetching student data:', error);
+        }
+    };
 
-    const handleDelete = (studentId) => {
-        // Implement your delete logic here
-        console.log(`Delete student with ID: ${studentId}`);
+    const handleDelete = async (studentId) => {
+        try {
+            const response = await fetch(`https://student-mngt-system-backend-ae1fa06b6810.herokuapp.com/api/delete_student/${studentId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                // Course deletion was successful
+                alert("Student deleted successfully!");
+                console.log(`Delete student with ID: ${studentId}`);
+                
+                fetchStudents();
+            } else {
+                console.error('Error deleting student:', data.error);
+            }
+        } catch (error) {
+            console.error('Error deleting student:', error);
+        }
     };
 
     return (
