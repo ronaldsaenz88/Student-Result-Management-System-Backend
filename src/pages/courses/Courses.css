@@ -1,0 +1,90 @@
+.courses-content {
+    text-align: center;
+    padding-left: 20rem;
+    padding-right: 5rem;
+}
+
+.table {
+    margin-top: 1rem;
+}
+
+.table table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Additional styles for the predictions table */
+.table-container {
+    margin-top: 1rem;
+    overflow-x: auto; /* Allows table to scroll on small screens */
+}
+
+.table {
+    width: 100%; /* Full width */
+    border-collapse: collapse;
+}
+
+.table thead {
+    background-color: #f2f2f2;
+}
+
+.table thead th {
+    padding: 0.5rem 1rem;
+}
+
+.table tbody td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Zebra-striping for rows */
+}
+
+/* Add this style to your existing CSS file or create a new file for styling */
+.delete-button {
+    background: none !important;
+    border: none;
+    cursor: pointer;
+    color: #ff5555; /* Color for the icon */
+    font-size: 1.5rem; /* Adjust the size as needed */
+}
+  
+.delete-button:hover {
+    color: #dd3333;
+}
+
+.form {
+    width: 300px;
+    margin: auto;
+}
+  
+.forminput {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+  
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+  
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
